@@ -33,6 +33,12 @@ apt install -y netcat \
 git clone https://github.com/offensive-security/exploitdb.git /opt/exploitdb
 ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
 
+# Install msfconsole
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  chmod 755 msfinstall && \
+  ./msfinstall
+rm msfinstall
+
 # Install wpscan
 gem install wpscan
 
