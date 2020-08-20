@@ -6,6 +6,8 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+apt update -y && apt upgrade -y
+
 # Install apt packages
 apt install -y netcat \
 	git \
