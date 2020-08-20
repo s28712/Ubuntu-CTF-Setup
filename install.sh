@@ -27,7 +27,15 @@ apt install -y netcat \
 	steghide \
 	ghex \
 	eog \
-	ruby
+	ruby \
+	build-essential \
+	libcurl4-openssl-dev \
+	libxml2 \
+	libxml2-dev \
+	libxslt1-dev \
+	ruby-dev \
+	libgmp-dev \
+	zlib1g-dev
 
 # Install exploitdb
 git clone https://github.com/offensive-security/exploitdb.git /opt/exploitdb
