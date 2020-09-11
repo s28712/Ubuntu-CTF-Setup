@@ -60,6 +60,7 @@ git clone https://github.com/pentestmonkey/php-reverse-shell.git /opt/php-revers
 # pip3 installs
 pip3 install pwntools
 
-# Change .bashrc
-echo "neofetch" >> /home/ubuntu/.bashrc
-source /home/ubuntu/.bashrc
+# install gef and tools
+curl -s -L https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
+pip3 install capstone
+pip3 install ropper
