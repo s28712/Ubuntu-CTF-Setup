@@ -35,7 +35,13 @@ apt install -y netcat \
 	libxslt1-dev \
 	ruby-dev \
 	libgmp-dev \
-	zlib1g-dev
+	zlib1g-dev \
+	wireshark \
+	binwalk \
+	z3 \
+	exiftool \
+	minimodem \
+	ffmpeg
 
 # Install exploitdb
 git clone https://github.com/offensive-security/exploitdb.git /opt/exploitdb
@@ -64,3 +70,8 @@ pip3 install pwntools
 curl -s -L https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
 pip3 install capstone
 pip3 install ropper
+pip3 install angr
+
+# use snap to install rest of the tools
+snap install spek --classic
+snap install gimp --classic
