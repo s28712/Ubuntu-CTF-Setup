@@ -6,4 +6,3 @@ touch /home/ubuntu/.vnc/passwd
 echo passwd | vncpasswd -f > ~/.vnc/passwd
 chown -R ubuntu:ubuntu /home/ubuntu/.vnc
 chmod 0600 /home/ubuntu/.vnc/passwd
-touch /home/ubuntu/.vnc/xstartup
