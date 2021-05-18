@@ -1,6 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
-exec /etc/vnc/xstartup
 xrdb $HOME/.Xresources
-vncconfig -iconic &
-dbus-launch --exit-with-session gnome-session &
+startxfce4 &
