@@ -20,7 +20,6 @@ apt install -y netcat \
 	net-tools \
 	nikto \
 	smbclient \
-	speedtest-cli \
 	python3 \
 	python3-pip \
 	ftp \
@@ -42,13 +41,15 @@ apt install -y netcat \
 	exiftool \
 	minimodem \
 	ffmpeg
+	
+# Install msfconsole
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
 
 # Install exploitdb
 git clone https://github.com/offensive-security/exploitdb.git /opt/exploitdb
 ln -sf /opt/exploitdb/searchsploit /usr/local/bin/searchsploit
 
-
 # Clone git repos
-git clone https://github.com/danielmiessler/SecLists.git /opt/seclists
-git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /opt/peas
+git clone --depth 1 https://github.com/danielmiessler/SecLists.git /opt/seclists
+git clone https://github.com/carlospolop/PEASS-ng.git /opt/peas
 git clone https://github.com/pentestmonkey/php-reverse-shell.git /opt/php-reverse-shell
